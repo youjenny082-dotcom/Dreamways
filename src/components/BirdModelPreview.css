@@ -1,0 +1,62 @@
+.bird-preview { --ink:#343a32; --muted:#777b6d; --line:rgba(62,66,52,.17); min-height:100svh; background:#efebe2; color:var(--ink); font-family:system-ui,"Microsoft YaHei",sans-serif; font-weight:400; }
+.bird-preview * { box-sizing:border-box; }
+.bird-preview button,.bird-preview select,.bird-preview input { font:inherit; }
+.bird-preview button,.bird-preview a,.bird-preview select { -webkit-tap-highlight-color:transparent; }
+.bird-preview button { cursor:pointer; transition:background .18s,color .18s; }
+.bird-preview button:disabled { opacity:.4; cursor:default; }
+.bird-preview button:focus-visible,.bird-preview a:focus-visible,.bird-preview input:focus-visible,.bird-preview select:focus-visible { outline:2px solid #71885e; outline-offset:4px; }
+.bird-preview__header { height:86px; padding:0 4%; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); gap:20px; }
+.bird-preview__brand { display:flex; align-items:baseline; gap:18px; font:25px Georgia,"SimSun",serif; text-decoration:none; color:inherit; letter-spacing:4px; }
+.bird-preview__brand span { font:9px system-ui,sans-serif; letter-spacing:2px; }
+.bird-preview__edition,.bird-preview__back { font-size:11px; letter-spacing:1.5px; }
+.bird-preview__back { color:inherit; text-decoration:none; }
+.bird-preview__layout { display:grid; grid-template-columns:minmax(0,1fr) 310px; height:calc(100svh - 86px); }
+.bird-preview__stage { position:relative; min-height:0; background:radial-gradient(ellipse at 50% 50%,#fbf8f0 0%,#efebe2 72%); overflow:hidden; }
+.bird-preview__caption { position:absolute; top:36px; left:5%; z-index:1; pointer-events:none; }
+.bird-preview__eyebrow { font-size:9px; letter-spacing:2.5px; color:var(--muted); }
+.bird-preview h1 { margin:17px 0 10px; font:clamp(26px,2.7vw,42px)/1.25 Georgia,"SimSun",serif; font-weight:400; letter-spacing:3px; }
+.bird-preview__caption p { font-size:12px; letter-spacing:1px; color:var(--muted); }
+.bird-preview__canvas { position:absolute; inset:135px 0 45px; }
+.bird-preview__canvas canvas { display:block; width:100%; height:100%; touch-action:none; cursor:grab; }
+.bird-preview__canvas canvas:active { cursor:grabbing; }
+.bird-preview__stage-footer { position:absolute; bottom:25px; left:5%; right:5%; display:flex; justify-content:space-between; gap:12px; font-size:10px; color:var(--muted); letter-spacing:1px; pointer-events:none; }
+.bird-preview__notice { position:absolute; inset:40% 12% auto; z-index:2; padding:22px; text-align:center; font-size:13px; line-height:1.7; background:#efebe2ed; border:1px solid var(--line); }
+.bird-preview__notice button { display:block; margin:15px auto 0; border:1px solid var(--line); padding:8px 20px; }
+.bird-preview__panel { padding:34px 27px 24px; border-left:1px solid var(--line); background:rgba(246,243,235,.7); overflow-y:auto; scrollbar-width:thin; }
+.bird-preview__status { display:flex; align-items:center; gap:8px; color:var(--muted); font-size:11px; letter-spacing:1px; }
+.bird-preview__status > span { width:6px; height:6px; border-radius:50%; background:#a4a696; }
+.bird-preview__status .is-ready { background:#6e8758; box-shadow:0 0 0 4px #6e875810; }
+.bird-preview h2 { font:23px Georgia,"SimSun",serif; margin:29px 0 15px; letter-spacing:2px; }
+.bird-preview__description { color:var(--muted); font-size:12px; line-height:1.9; margin-bottom:24px; }
+.bird-preview__playback { display:flex; align-items:stretch; gap:10px; }
+.bird-preview__play { flex:1; background:#364232; border:0; color:#f8f7ed; border-radius:3px; padding:12px 8px; font-size:12px!important; }
+.bird-preview__play:hover { background:#4a5942; }
+.bird-preview__playback label { display:flex; flex-direction:column; justify-content:center; gap:3px; font-size:9px; color:var(--muted); }
+.bird-preview select { background:transparent; color:var(--ink); border:0; font-size:12px; }
+.bird-preview__timeline { margin:24px 0 28px; }
+.bird-preview__timeline > div { display:flex; justify-content:space-between; gap:8px; font-size:10px; color:var(--muted); }
+.bird-preview__timeline output { font-variant-numeric:tabular-nums; }
+.bird-preview__timeline input { width:100%; margin:14px 0 0; height:3px; accent-color:#59684b; cursor:pointer; }
+.bird-preview__control-group { border-top:1px solid var(--line); padding:20px 0; }
+.bird-preview h3 { font-size:11px; font-weight:400; margin:0 0 14px; color:var(--muted); letter-spacing:1px; }
+.bird-preview__views { display:flex; gap:8px; }
+.bird-preview__views button { flex:1; border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:3px; padding:9px 0; font-size:11px; }
+.bird-preview__views button:hover { background:#e0e4d6; }
+.bird-preview__reset { border:0; background:none; color:var(--muted); padding:12px 0 0; font-size:10px!important; }
+.bird-preview__swatches { display:flex; gap:20px; }
+.bird-preview__swatches button { display:flex; align-items:center; gap:7px; border:0; background:transparent; color:var(--muted); font-size:11px; padding:0; }
+.bird-preview__swatches button[aria-pressed=true] { color:var(--ink); }
+.bird-preview__swatches i { width:17px; height:17px; border-radius:50%; border:1px solid #9b9d8f; }
+.bird-preview__swatches button[aria-pressed=true] i { outline:1px solid #6e795f; outline-offset:3px; }
+.bird-preview__swatches .is-paper { background:#f1ece0; }
+.bird-preview__swatches .is-dark { background:#282d2b; }
+.bird-preview__details { border-top:1px solid var(--line); padding-top:16px; margin:0; font-size:10px; line-height:2.25; }
+.bird-preview__details > div { display:flex; justify-content:space-between; }
+.bird-preview__details dt { color:var(--muted); }
+.bird-preview__details dd { margin:0; font-variant-numeric:tabular-nums; }
+.bird-preview__footnote { font-size:10px; line-height:1.8; color:var(--muted); margin:18px 0 0; }
+.bird-preview--dark .bird-preview__stage { background:radial-gradient(ellipse at 50% 50%,#3c423e,#252b28); }
+.bird-preview--dark .bird-preview__caption { color:#e8e7d9; }
+.bird-preview--dark .bird-preview__caption p,.bird-preview--dark .bird-preview__eyebrow,.bird-preview--dark .bird-preview__stage-footer { color:#a5afa0; }
+@media (min-width:1500px) { .bird-preview__layout { grid-template-columns:minmax(0,1fr) 350px; }.bird-preview__panel { padding:38px; } }
+@media (max-width:760px) { .bird-preview__header { height:70px; padding:0 22px; }.bird-preview__brand span,.bird-preview__edition { display:none; }.bird-preview__layout { display:block; height:auto; }.bird-preview__stage { min-height:560px; height:70svh; }.bird-preview__caption { top:28px; left:24px; }.bird-preview__canvas { top:130px; bottom:40px; }.bird-preview__panel { border-left:0; border-top:1px solid var(--line); padding:26px; overflow:visible; }.bird-preview h2 { margin-top:20px; }.bird-preview__stage-footer { font-size:9px; } }

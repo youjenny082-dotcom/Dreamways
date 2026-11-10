@@ -17,9 +17,9 @@
 // ────────────────────────────────────────────────────────────
 export const siteConfig = {
   /** 网站大标题 */
-  title: '梦途',
+  title: '夜迁',
   /** 副标题（英文装饰，显示在 logo 旁） */
-  titleSub: 'Dreamways',
+  titleSub: 'Night migration',
   /** 首页英雄区副文案 */
   heroSubtitle: '四季四梦，每夜启程。',
   /** 向下滚动提示文字 */
